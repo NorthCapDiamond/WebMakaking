@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $_SESSION = [];
 ?>
 <!DOCTYPE html>
 <html>
@@ -219,6 +218,10 @@
                 alert("Вы не выбрали X");
                 return false;
             }
+            if (String(y).length>5){
+                alert("Вводите \"y\" с точностью не более 3х знаков после запятой");
+                return false;
+            }
             if (y <= -3 | y >= 3) {
                 alert("Вы нарушили границы Y.");
                 return false;
@@ -403,3 +406,7 @@
 	</div>
 </body>
 </html>
+
+
+
+
